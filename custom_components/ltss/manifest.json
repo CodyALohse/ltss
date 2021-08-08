@@ -1,14 +1,15 @@
 {
     "domain": "ltss",
-    "version": "1.0.0",
-    "name": "Long Time State Storage (LTSS)",
-    "documentation": "https://github.com/freol35241/ltss",
+    "version": "2.0.0",
+    "name": "Long Time State Storage (LTSS) - Non PostGIS",
+    "documentation": "https://github.com/CodyALohse/ltss",
     "requirements": [
       "sqlalchemy>=1.0,<2.0",
       "psycopg2>=2.8,<3.0"
     ],
     "dependencies": [],
     "codeowners": [
+      "@CodyALohse",
       "@freol35241"
     ]
   }

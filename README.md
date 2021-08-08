@@ -1,4 +1,6 @@
-**Update:** Removed PostGIS 
+**Update:** Removed PostGIS requirement - updated manifiest to point to this repo. See commit history for additional changes from forked repo.
+
+NOTE: If there are issues installing due to the DB migration process you may need to drop the home assistant DB and re-create. This is obviously a destructive action and your data will be lost unless you back it up and figure out how to restore it.
 
 Long time state storage (LTSS) custom component for Home Assistant
 ========================================
@@ -24,8 +26,7 @@ Nice to know:
 
 Precondition
 * Make sure that you PostgreSQL instance is up and running and that you have created a database, ```DB_NAME```. 
-* I recommend the following docker image: https://docs.timescale.com/v1.0/getting-started/installation/docker/installation-docker#postgis-docker to get started quickly and easy.
-* If you are using an armv7-system (like raspberry pi) you can find a precompiled docker-image [here](https://hub.docker.com/repository/docker/dekiesel/timescaledb-postgis).
+* I recommend the following docker image: https://hub.docker.com/layers/timescale/timescaledb/latest-pg13/images/sha256-d70b350f1816de5607003641d6e77f325693961487170768ecaf6be5fad3572f?context=explore to get started quickly and easy.
 
 
 Manual installation:
