@@ -1,3 +1,5 @@
+**Update:** Removed PostGIS 
+
 Long time state storage (LTSS) custom component for Home Assistant
 ========================================
 
