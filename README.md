@@ -9,7 +9,6 @@ Long time state storage (LTSS) custom component for Home Assistant
 
 Enabling simple long time state storage (LTSS) for your sensor states. Requires a PostgreSQL instance with the following extensions:
 * TimescaleDB
-* PostGIS
 
 This component is not to be considered as a replacement to the recorder component in Home Assistant but rather as an alternative to the InfluxDB component for more space-efficient long time storage of specific sensor states.
 
@@ -97,9 +96,9 @@ configuration.yaml
 ## Details
 The states are stored in a single [hypertable](https://docs.timescale.com/latest/using-timescaledb/hypertables) with the following layout:
 
-| Column name: | id | time | entity_id | state | attributes | location |
-|:---|:---:|:---:|:---:|:---:|:---:|:---:|
-| Type: | bigint | timestamp with timezone | string | string | JSONB | POINT(4326) |
+| Column name: | id | time | entity_id | state | attributes |
+|:---|:---:|:---:|:---:|:---:|:---:|
+| Type: | bigint | timestamp with timezone | string | string | JSONB |
 | Primary key: | x | x |  |  |  |
 | Index: | x | x | x | x | x | |
 

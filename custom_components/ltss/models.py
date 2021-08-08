@@ -13,7 +13,6 @@ from sqlalchemy import (
 
 from sqlalchemy.schema import Index
 from sqlalchemy.dialects.postgresql import JSONB
-from geoalchemy2 import Geometry
 from sqlalchemy.ext.declarative import declarative_base
 
 # SQLAlchemy Schema
@@ -41,15 +40,12 @@ class LTSS(Base):  # type: ignore
         state = event.data.get("new_state")
 
         attrs = dict(state.attributes)
-        lat = attrs.pop('latitude', None)
-        lon = attrs.pop('longitude', None)
 
         row = LTSS(
             entity_id=entity_id,
             time=event.time_fired,
             state=state.state,
-            attributes=attrs,
-            location=f'SRID=4326;POINT({lon} {lat})' if lon and lat else None
+            attributes=attrs
         )
 
         return row
